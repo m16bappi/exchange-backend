@@ -1,0 +1,22 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "~=5.0.0"
+djangorestframework = "~=3.14.0"
+web3 = "~=6.12.0"
+python-dotenv = "~=1.0.0"
+rsa = "~=4.9"
+eth-account = "~=0.10.0"
+
+[dev-packages]
+black = "~=23.11.0"
+mypy = "~=1.7.1"
+django-stubs = "~=4.2.6"
+djangorestframework-stubs = "~=3.14.4"
+ipython = "~=8.18.0"
+
+[requires]
+python_version = "3.12"

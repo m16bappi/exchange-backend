@@ -1,0 +1,41 @@
+[project]
+name = "crypto-exchange"
+version = "2024.0.0"
+requires-python = "3.12"
+
+[tool.black]
+line-length = 90
+target-version = ['py312']
+skip-string-normalization = true
+
+include = '\.pyi?$'
+exclude = '''
+/(
+  \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+)/
+'''
+
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+warn_unused_configs = true
+check_untyped_defs = true
+strict_equality = true
+plugins = [
+  "mypy_django_plugin.main", 
+  "mypy_drf_plugin.main"
+]
+
+[tool.pyright]
+ignore = ['**/urls.py']
+pythonVersion = "3.12"
+
+[tool.django-stubs]
+django_settings_module = "config.settings"

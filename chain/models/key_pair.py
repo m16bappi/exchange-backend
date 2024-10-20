@@ -15,7 +15,6 @@ class EncryptedKeyPair(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
-        db_table = 'key_pair'
         verbose_name = 'key_pair'
         verbose_name_plural = 'key_pairs'
 

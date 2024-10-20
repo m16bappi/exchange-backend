@@ -72,7 +72,6 @@ class Migration(migrations.Migration):
             options={
                 'verbose_name': 'payment',
                 'verbose_name_plural': 'payments',
-                'db_table': 'payment',
             },
         ),
     ]

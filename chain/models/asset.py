@@ -20,7 +20,6 @@ class Asset(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
-        db_table = 'asset'
         verbose_name = 'asset'
         verbose_name_plural = 'assets'
         constraints = [

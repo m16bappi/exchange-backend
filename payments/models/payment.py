@@ -38,7 +38,6 @@ class Payment(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
-        db_table = 'payment'
         verbose_name = 'payment'
         verbose_name_plural = 'payments'
 

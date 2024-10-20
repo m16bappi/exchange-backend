@@ -22,7 +22,6 @@ class Network(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
-        db_table = 'network'
         verbose_name = 'network'
         verbose_name_plural = 'networks'
 

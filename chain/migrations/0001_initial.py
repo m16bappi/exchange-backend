@@ -32,7 +32,6 @@ class Migration(migrations.Migration):
             options={
                 'verbose_name': 'key_pair',
                 'verbose_name_plural': 'key_pairs',
-                'db_table': 'key_pair',
             },
         ),
         migrations.CreateModel(
@@ -62,7 +61,6 @@ class Migration(migrations.Migration):
             options={
                 'verbose_name': 'network',
                 'verbose_name_plural': 'networks',
-                'db_table': 'network',
             },
         ),
         migrations.CreateModel(
@@ -97,7 +95,6 @@ class Migration(migrations.Migration):
             options={
                 'verbose_name': 'asset',
                 'verbose_name_plural': 'assets',
-                'db_table': 'asset',
             },
         ),
         migrations.AddConstraint(

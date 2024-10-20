@@ -12,7 +12,7 @@ class SupportedAsset(models.TextChoices):
 
 
 class Asset(models.Model):
-    symbol = models.CharField(max_length=255, choices=SupportedAsset.choices)
+    symbol = models.CharField(max_length=255, choices=SupportedAsset)
     network = models.ForeignKey(Network, on_delete=models.CASCADE)
     address = models.CharField(max_length=255)
     enabled = models.BooleanField(default=True)
@@ -25,8 +25,7 @@ class Asset(models.Model):
         verbose_name_plural = 'assets'
         constraints = [
             models.UniqueConstraint(
-                fields=['symbol', 'network'],
-                name='unique_asset_by_network'
+                fields=['symbol', 'network'], name='unique_asset_by_network'
             )
         ]
 

@@ -13,8 +13,9 @@ class ActiveNetwork(models.TextChoices):
 
 class Network(models.Model):
     name = models.CharField(
-        max_length=255, unique=True,
-        choices=ActiveNetwork.choices,
+        max_length=255,
+        unique=True,
+        choices=ActiveNetwork,
     )
     rpc = models.URLField(max_length=255)
     created_at = models.DateTimeField(auto_now_add=True)

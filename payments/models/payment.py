@@ -17,13 +17,9 @@ class PaymentStatus(models.IntegerChoices):
 
 class Payment(models.Model):
     base_asset = models.ForeignKey(
-        Asset, on_delete=models.CASCADE,
-        related_name='asset'
-    )
+        Asset, on_delete=models.CASCADE, related_name='asset')
     payment_address = models.ForeignKey(
-        EncryptedKeyPair,
-        on_delete=models.CASCADE,
-        related_name='key_pair'
+        EncryptedKeyPair, on_delete=models.CASCADE, related_name='key_pair'
     )
     received_address = models.CharField(max_length=255)
     '''
@@ -31,15 +27,12 @@ class Payment(models.Model):
     should be between min and max limit bound.
     '''
     amount = models.DecimalField(
-        max_digits=18,
-        decimal_places=12,
-        validators=[MinValueValidator(Decimal(0.01))]
+        max_digits=18, decimal_places=12, validators=[MinValueValidator(Decimal(0.01))]
     )
     paid_amount = models.DecimalField(max_digits=18, decimal_places=12)
     tx_hash = models.CharField(max_length=255)
     status = models.IntegerField(
-        choices=PaymentStatus.choices,
-        default=PaymentStatus.ACCEPTED
+        choices=PaymentStatus.choices, default=PaymentStatus.ACCEPTED
     )
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

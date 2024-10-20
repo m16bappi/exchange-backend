@@ -1,11 +1,11 @@
 [project]
 name = "crypto-exchange"
 version = "2024.0.0"
-requires-python = "3.12"
+requires-python = "3.13"
 
 [tool.black]
 line-length = 90
-target-version = ['py312']
+target-version = ['py313']
 skip-string-normalization = true
 
 include = '\.pyi?$'
@@ -23,7 +23,7 @@ exclude = '''
 '''
 
 [tool.mypy]
-python_version = "3.12"
+python_version = "3.13"
 warn_return_any = true
 warn_unused_configs = true
 check_untyped_defs = true
@@ -35,7 +35,7 @@ plugins = [
 
 [tool.pyright]
 ignore = ['**/urls.py']
-pythonVersion = "3.12"
+pythonVersion = "3.13"
 
 [tool.django-stubs]
 django_settings_module = "config.settings"

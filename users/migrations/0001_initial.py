@@ -41,6 +41,10 @@ class Migration(migrations.Migration):
                 ),
                 ('password', models.CharField(
                     max_length=128, verbose_name='password')),
+                (
+                    'forgot_password_token',
+                    models.CharField(max_length=255, null=True, unique=True),
+                ),
                 ('forgot_password_token_sent_at', models.DateTimeField(null=True)),
                 ('phone_number', models.CharField(max_length=15, unique=True)),
                 (
@@ -52,10 +56,6 @@ class Migration(migrations.Migration):
                 ('otp_secret', models.CharField(
                     max_length=255, null=True, unique=True)),
                 ('is_otp_active', models.BooleanField(default=False)),
-                (
-                    'forgot_password_token',
-                    models.CharField(max_length=255, null=True, unique=True),
-                ),
                 (
                     'status',
                     models.CharField(

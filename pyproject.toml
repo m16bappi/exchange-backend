@@ -19,6 +19,7 @@ exclude = '''
   | _build
   | buck-out
   | build
+  | migrations
 )/
 '''
 
@@ -34,7 +35,10 @@ plugins = [
 ]
 
 [tool.pyright]
-ignore = ['**/urls.py']
+ignore = [
+  '**/urls.py',
+  '**/migrations/**/*.py'
+]
 pythonVersion = "3.13"
 
 [tool.django-stubs]

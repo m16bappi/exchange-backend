@@ -3,7 +3,7 @@ from django.db import models
 from django.contrib import admin
 
 #  -------------- import form local modules --------------------
-from chain.accounts import LocalAccount, RsaEncryptor
+from chain.accounts import LocalAccount, FernetEncryptor
 
 
 class EncryptedKeyPair(models.Model):
@@ -27,7 +27,7 @@ class EncryptedKeyPair(models.Model):
         )
 
     def decrypt(self):
-        return RsaEncryptor.decrypt(self.salt, self.payload)
+        return FernetEncryptor.decrypt(self.salt, self.payload)
 
     def __str__(self):
         return self.address

@@ -10,6 +10,7 @@ web3 = "~=7.4.0"
 rsa = "~=4.9"
 eth-account = "~=0.13.4"
 pyotp = "~=2.9.0"
+cryptography = "~=43.0.3"
 
 [dev-packages]
 black = "~=24.10.0"

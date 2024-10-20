@@ -1,6 +1,10 @@
-from .base import BaseAccount, LocalAccount
-from .account import EvmAccount
-from .encryptors import RsaEncryptor
+from .encryptors import RsaEncryptor, FernetEncryptor
+from .account import EvmAccount, LocalAccount, BaseAccount
 
-
-__all__ = ["BaseAccount", "EvmAccount", "RsaEncryptor", "LocalAccount"]
+__all__ = [
+    "BaseAccount",
+    "EvmAccount",
+    "LocalAccount",
+    "RsaEncryptor",
+    "FernetEncryptor",
+]
